@@ -29,3 +29,27 @@ document.getElementById("welcomeBtn").addEventListener("click", () => {
     },
   });
 });
+
+
+const themeBtn = document.getElementById("themeBtn");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-theme");
+  themeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+}
+
+// Toggle theme
+themeBtn.addEventListener("click", () => {
+
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    themeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+    localStorage.setItem("theme", "light");
+  } else {
+    themeBtn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+    localStorage.setItem("theme", "dark");
+  }
+
+});

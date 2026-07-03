@@ -24,3 +24,66 @@ body {
 .transition {
     transition: all 0.2s ease-in-out;
 }
+
+/* Theme Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle button {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    border: none;
+    transition: .3s;
+}
+
+/* Smooth transition */
+body,
+.hero-card,
+.skill-card,
+button {
+    transition: all .35s ease;
+}
+
+/* Light Theme */
+body.light-theme {
+    background: #f5f7fb;
+    color: #222;
+}
+
+body.light-theme .hero-card {
+    background: rgba(255, 255, 255, .95);
+    color: #222;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+body.light-theme .skill-card {
+    background: #fff;
+    color: #222;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .lead,
+body.light-theme .typing-text {
+    color: #555 !important;
+}
+
+body.light-theme .btn-outline-light {
+    color: #222;
+    border-color: #222;
+}
+
+body.light-theme .btn-outline-light:hover {
+    background: #222;
+    color: white;
+}
+
+/* Change toggle button color */
+body.light-theme #themeBtn {
+    background: #222;
+    color: white;
+}
